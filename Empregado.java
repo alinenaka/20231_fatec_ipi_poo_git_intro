@@ -1,8 +1,27 @@
 public class Empregado{
+    private int tipo;
     //variável de instância (objeto) 
     private String nome; //somente essa classe pode acessar. Variável encapsulada
     //variável de instância (objeto)
     private int idade;
+    private double salario;
+    private double comissao;
+    private double bonus;
+
+
+
+    public double calcularSalario () {
+        if (tipo == 0) {
+            return salario;
+        }
+        if (tipo == 1) {
+            return salario + salario * bonus;
+        }
+        if (tipo == 2) {
+            return salario + bonus;
+        }
+        return 0;
+    }
 
     public String getNome(){ // método para obter o nome 
         return nome;
